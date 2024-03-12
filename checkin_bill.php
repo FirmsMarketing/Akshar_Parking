@@ -22,7 +22,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $d = date('Y-m-d', strtotime($EntryDateTime));
         $t = date('H:i', strtotime($EntryDateTime));
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -90,9 +89,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
     <h3>Thank You!</h3>
     <i class="fa fa-barcode" style="font-size:48px;color:red"></i><i class="fa fa-barcode" style="font-size:48px;color:red"></i><i class="fa fa-barcode" style="font-size:48px;color:red"></i>
-
-    
-
 </div>
 
 <!-- JavaScript to trigger print automatically -->
@@ -107,6 +103,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Print
         window.print();
+
+        // Redirect to index.php after printing
+        window.location.href = 'index.php';
 
         // Show body and html elements
         document.body.style.display = 'block';
